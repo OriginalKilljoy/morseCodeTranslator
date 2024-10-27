@@ -1,9 +1,13 @@
 updateView()
 
 function updateView(){
-    outputDiv.innerHTML = /*HTML*/`
-    <input type="text" onchange="translator(this)"/>
+    document.getElementById('app').innerHTML = /*HTML*/`
+    <div class="mainDiv">
+    <input type=text onchange="makeTranslation(this.value)"/>
+    <div class="secondaryDiv">
     <div>${lettersFromInput}</div>
     <div>${letterTranslatedToMorse}</div>
+    </div>
+    </div>
     `
 }
